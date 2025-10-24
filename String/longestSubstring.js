@@ -27,3 +27,9 @@ const getLongestUniqueSubstring = function(s) {
 
 const answer = getLongestUniqueSubstring(s);
 console.log("answer : " + answer);
+
+/* Point to remember :
+    left needs to be updated only when both conditions are true :
+        - charMap has the char already &&
+        - the index of char is greater than left [ if less tha left then ledt should not be updated]
+*/

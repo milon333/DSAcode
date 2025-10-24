@@ -8,7 +8,7 @@ const minimumConsecutiveCards = function(cards) {
 
     if ( cards.length < 2) return -1;
 
-    let minLength = cards.length;
+    let minLength = Infinity;
     const cardMap = new Map();
 
     for (let right = 0; right < cards.length; right++) {
@@ -21,7 +21,7 @@ const minimumConsecutiveCards = function(cards) {
         cardMap.set(card, right);
     }
 
-    return minLength === cards.length ? -1 : minLength;
+    return minLength === Infinity ? -1 : minLength;
 }
 
 const answer = minimumConsecutiveCards(cardsInput);
@@ -29,4 +29,8 @@ console.log(answer);
 
 /* Important :
    when calculating min length, left pointer not required
+   1.  each distance calculation is independent
+   2. still just tracking the last occurrence and measuring gaps
+   3. no window maintenace required
+   4. similar logic even if largest distance between 2 duplicates [Math.max]
 */

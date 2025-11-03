@@ -19,9 +19,11 @@ const longestBivalueSubarray = function(nums, k) {
 
     for (let right = 0; right < nums.length; right++) {
 
+        // add digit & count in map
         const digit = nums[right];
         numCount.set(digit, (numCount.get(digit) || 0) + 1);
 
+        // increment left pointer until map has 2 keys
         while (numCount.size > k) {
             const leftDigit = nums[left];
             numCount.set(leftDigit, numCount.get(leftDigit) - 1);
@@ -35,6 +37,7 @@ const longestBivalueSubarray = function(nums, k) {
 
         const currentLength = (right - left) + 1;
 
+        // if there is a new maxLength clear the set
         if (currentLength > maxLength) {
             resultSet.clear();
             maxLength = currentLength;

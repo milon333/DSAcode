@@ -11,6 +11,8 @@ let getKthLargestNumSimple = function(inputArray, k) {
     if (k < 1 || k > inputArray.length) return "Invalid K value";
     
     // Sort in descending order
+    // NOTE: slice() creates a copy because sort() mutates the original array
+    // Without slice(), the inputArray would be permanently modified (side effect)
     let sorted = inputArray.slice().sort((a, b) => b - a);
     
     // Get kth element (k-1 because array is 0-indexed)

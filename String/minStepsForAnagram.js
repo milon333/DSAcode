@@ -28,6 +28,9 @@ const minStepstoAnagram = function(s, t) {
 const answer = minStepstoAnagram(str1, str2);
 console.log("answer : ", answer);
 
+const a = "this  is";
+console.log(a.split(" ").join(""));
+
 
 // time complexity : O(n + 26);
 //space complexity : O(26);

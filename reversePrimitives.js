@@ -9,6 +9,7 @@ var reverseNumber = function(num) {
     while (numCopy > 0) {
         temp = numCopy % 10;
         reverseNum = (reverseNum * 10) + temp;
+        // parseInt to return only the number before decimal point
         numCopy = parseInt(numCopy/10);
     }
 

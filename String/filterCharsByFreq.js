@@ -1,6 +1,7 @@
 const input = "aadbbcccca", k = 4;
 
 /** returns all chars that are repeated less than k times
+ * without disturbing original order of chars in input
  * @param {string} : s
  * @param {number} : k
  * @returns {string}

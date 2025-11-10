@@ -14,7 +14,7 @@ const longestBivalueSubarray = function(nums, k) {
     let left = 0;
     let maxLength = 0;
     const numCount = new Map();
-    const resultSet = new Set;
+    const resultSet = new Set();
 
 
     for (let right = 0; right < nums.length; right++) {

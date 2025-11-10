@@ -16,7 +16,7 @@ const minStepstoAnagram = function(s, t) {
         charCount[ t.charCodeAt(i) - base ]--;
     }
 
-    // for every count > 0 we summ the count
+    // for every count > 0 we sum the count
     // ignore - counts as we are replacling in every step
     // if + & - both will be considered the result = count/2
     let count = 0;
@@ -27,9 +27,6 @@ const minStepstoAnagram = function(s, t) {
 
 const answer = minStepstoAnagram(str1, str2);
 console.log("answer : ", answer);
-
-const a = "this  is";
-console.log(a.split(" ").join(""));
 
 
 // time complexity : O(n + 26);

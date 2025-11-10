@@ -1,4 +1,4 @@
-const input = ")((()))()()()(", k = 2;
+const input = ")(((())))()()()(", k = 2;
 
 const removeKbalancedSubstrings = function(s, k){
     if (k === 0) return s;

@@ -10,7 +10,7 @@ const returnKFrequentWords = function(words, k) {
 
     // sort count map based on their count
     const sorted = [...countMap.entries()].sort((a, b) => {
-        // sort based on their alphabets
+        // sort based on their alphabets; a[1] returns count; a[0] returns words
         if (a[1] === b[1]) return a[0].localeCompare(b[0]);
 
         // sort descending base on values

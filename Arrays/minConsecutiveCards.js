@@ -30,7 +30,7 @@ console.log(answer);
 /* Important :
    when calculating min length, left pointer not required
    1.  each distance calculation is independent
-   2. still just tracking the last occurrence and measuring gaps
+   2. just tracking the last occurrence and measuring gaps
    3. no window maintenace required
    4. similar logic even if largest distance between 2 duplicates [Math.max]
 */

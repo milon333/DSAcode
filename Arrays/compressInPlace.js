@@ -1,10 +1,10 @@
-// In place compression of chracters with their count
+// In place compression of characters with their count
 const input = ["a","b","b","b","b","b","b","b","b","b","b","b","b","c","c"];
 
 /**
- * 
- * @param {string[]} chars
- * @returns {string[]} chars
+ * Compresses array of characters in place using run-length encoding
+ * @param {string[]} chars - Array of characters to compress
+ * @returns {string[]} Compressed array (modified in place, truncated to compressed length)
  */
 const compressInPlace = function(chars) {
     // need 2 pointers : left- position of array updation; right- traversing chars
@@ -21,9 +21,10 @@ const compressInPlace = function(chars) {
 
             // frequency count should follow char only if greater than 1
             if (count > 1) {
-                for (let idx of count.toString()) { // convert num to String
-                    // digits need to be separated and replaced in chars Array
-                    chars[left++] = idx;
+                // convert count to string and write each digit separately
+                const countStr = count.toString();
+                for (let digit of countStr) {
+                    chars[left++] = digit;
                 }
             }
 

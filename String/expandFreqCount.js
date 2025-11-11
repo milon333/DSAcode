@@ -13,6 +13,7 @@ const expandCharFreqCount = function(s) {
 
         // nums needs to built in case of multiple digits
         let nums = "";
+
         // the test will result in true or false until the match
         // needed to collect all digits
         while (i < s.length && /\d/.test(s[i])) {

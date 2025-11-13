@@ -9,7 +9,6 @@ const removeKbalancedSubstrings = function(s, k){
 
         charStack.push(char);
 
-
         if (charStack.length >= 2*k) {
             let isKbalanced = true;
             const l = charStack.length;

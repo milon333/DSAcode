@@ -3,6 +3,7 @@ const input = "MilonKumarPanda"
 
 const getCharFreq = function(s) {
     const charMap = new Map();
+    let result = "";
 
     for (let char of s) {
         charMap.set(char, (charMap.get(char) || 0) + 1);
